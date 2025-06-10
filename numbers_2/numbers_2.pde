@@ -19,20 +19,30 @@ void draw() {
   a = 1;
   fill(a, m, m);
   // 问了AI,AI给出了String.format()
-  s = String.format("初值%d_除以%d的余数_%d的整数次方_%dx%d格.png",a, m, p, width/w, height/h);
+  s = String.format("初值1_除以%d的余数_%d的整数次方_%dx%d格.png", m, p, width/w, height/h);
   println(s);
   for (int y = 0; y < height; y += h) {
     for (int x = 0; x < width; x += w) {
       rect(x, y, w, h);
       a *= p;
-      if (a > m) {a = a % m;}
+      if (a > m) {
+        a = a % m;
+      }
       fill(a, m, m);
-  }}
+    }
+  }
   //saveFrame(s);
   p++;
-  if (p == m) {
+  if (p >= m) {
     p = 1;
-    m++;}
-  //if (m == 101) {noLoop();}
+    m++;
+  }
+  if (m >= 10) {noLoop();}
 }
-void mousePressed() {if (mouseButton == RIGHT) {saveFrame(s);} else{redraw();}}
+void mousePressed() {
+  if (mouseButton == RIGHT) {
+    saveFrame(s);
+  } else {
+    redraw();
+  }
+}

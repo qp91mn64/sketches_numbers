@@ -20,26 +20,37 @@ void draw() {
   a = 0;
   fill(a, m, m);
   // 问了AI,AI给出了String.format()
-  s = String.format("初值%d_除以%d的余数_四面体数的%d倍_%dx%d格.png",a, m, p, width/w, height/h);
+  s = String.format("初值0_除以%d的余数_四面体数的%d倍_%dx%d格.png", m, p, width/w, height/h);
   println(s);
   for (int y = 0; y < height; y += h) {
     for (int x = 0; x < width; x += w) {
       rect(x, y, w, h);
-      //println(a);
       da += p;
       da1 += da;
       a += da1;
-      // Java不能直接打印大于等于2**31的数字除非用type long,即2147483648L,不能直接打印大于等于2**63的数字除非用big numbers?
-      if (a > m) {a = a % m;}
+      // Java不能处理大于等于2**31的数字除非用type long,即2147483648L,不能处理大于等于2**63的数字除非用big numbers?
+        if (a > m) {
+          a = a % m;
+        }
       aa = a % m;
       //println(a);
       fill(aa, m, m);
-  }}
+    }
+  }
   //saveFrame(s);
   p++;
-  if (p == m) {
+  if (p >= m) {
     p = 1;
-    m++;}
-  if (m == 31) {noLoop();}
+    m++;
+  }
+  if (m >= 10) {
+    noLoop();
+  }
 }
-void mousePressed() {if (mouseButton == RIGHT) {saveFrame(s);} else{redraw();}}
+void mousePressed() {
+  if (mouseButton == RIGHT) {
+    saveFrame(s);
+  } else {
+    redraw();
+  }
+}
