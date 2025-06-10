@@ -3,6 +3,7 @@ int w = 10;
 int h = 10;
 int a;
 int m = 89;
+int max_m = 10;
 String s;
 void setup() {
   size(300, 400);
@@ -37,7 +38,9 @@ void draw() {
     p = 1;
     m++;
   }
-  if (m >= 10) {noLoop();}
+  if (m > max_m) {
+    noLoop();
+  }
 }
 void mousePressed() {
   if (mouseButton == RIGHT) {

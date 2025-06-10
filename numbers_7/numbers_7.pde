@@ -4,6 +4,7 @@ int h = 10;
 int a;
 int f = 1;
 int m = 67;
+int max_m = 10;
 String s;
 void setup() {
   size(100, 100);
@@ -43,7 +44,7 @@ void draw() {
     p = 1;
     m++;
   }
-  if (m >= 10) {
+  if (m > max_m) {
     noLoop();
   }
 }
