@@ -10,7 +10,7 @@ void setup() {
   noStroke();
   colorMode(HSB, m);
   fill(0, m, m);
-  //noLoop();
+  noLoop();
   //frameRate(1);
 }
 void draw() {
@@ -35,7 +35,7 @@ void draw() {
       fill(aa, m, m);
     }
   }
-  saveFrame(s);
+  //saveFrame(s);
   p++;
   if (p >= m) {
     p = 1;
