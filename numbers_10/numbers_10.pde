@@ -1,4 +1,4 @@
-/** 2025/6/19
+/** 2025/6/19 - 2025/6/20
   二次函数式子的p倍 
   p * (a2 * n * n + a1 * n + a0)
   
@@ -14,6 +14,10 @@
   这里没有设置批量保存图形的功能
   只是仍然设置能自动保存图形
   可以选择黑白或彩色模式
+  
+  由于只有颜色不同的图片名称重复会覆盖，问了DeepSeek
+  最后决定使用7位随机参数来区分只有颜色不同的图片名称以免覆盖，通常不会重复
+  保险起见可以把保存的图形放到其他文件夹再接着画
   */
   
 int a0 = 0;
@@ -24,6 +28,7 @@ int w = 10;
 int h = 10;
 int a;
 int m = 2;
+int b = int(random(10000000));
 color[] c;
 String s;
 void setup() {
@@ -35,7 +40,7 @@ void setup() {
 }
 void draw() {
   // 问了AI,AI给出了String.format()
-  s = String.format("除以%d的余数_%d倍_%dn2+%dn+%d_%dx%d格.png", m, p, a2, a1, a0, width/w, height/h);
+  s = String.format("除以%d的余数_%d倍_%dn2+%dn+%d_%dx%d格_%s.png", m, p, a2, a1, a0, width/w, height/h, nf(b, 7));
   println(s);
   for (int n = 0; n < (width/w) * (height/h); n++) {
     a = calculate(n, p, a2, a1, a0, m);
@@ -64,6 +69,7 @@ void keyPressed() {
         p = 1;
         m++;
         newColor(m);
+        b = int(random(10000000));
       }
       redraw();
       break;
@@ -74,6 +80,7 @@ void keyPressed() {
           m--;
           p = m-1;
           newColor(m);
+          b = int(random(10000000));
         }
       }
       redraw();
