@@ -14,9 +14,23 @@
 - numbers_8.pde：指定二次函数的整数倍
 - numbers_9.pde：指定或随机参数的二次函数的整数倍
 - numbers_10.pde：指定或随机参数的二次函数的整数倍，加上随机指定高饱和度彩色（或黑白）
+
+### 边框
+
 - border_1.pde：在numbers_1.pde的基础上加上边框
 - border_2.pde：在numbers_2.pde的基础上加上边框
+- border_3.pde：在numbers_3.pde的基础上加上边框
 - border_6.pde：在numbers_6.pde的基础上加上边框
+
+### 随机
+
+- random_1.pde：在numbers_1.pde的基础上随机p和m
+- random_2.pde：在numbers_2.pde的基础上随机p和m
+- random_3.pde：在numbers_3.pde的基础上随机p和m
+- random_4.pde：在numbers_4.pde的基础上随机p和m
+- random_5.pde：在numbers_5.pde的基础上随机p和m
+- random_6.pde：在numbers_6.pde的基础上随机p和m
+- random_7.pde：在numbers_7.pde的基础上随机p和m
 
 ## 当前代码简介
 
@@ -60,9 +74,13 @@
 
 与numbers_9.pde类似，但是随机高饱和颜色或黑白灰。
 
-### b0rder_x.pde
+### border_x.pde边框系列
 
 边框系列，目前就是在numbers_x系列的基础上加上不同宽度的边框
+
+### random_x.pde随机系列
+
+随机系列，目前就是在numbers_x系列的基础上随机指定p和m，主要用于看视觉效果，不批量保存图形，也不用于动画效果
 
 ### 颜色说明
 
@@ -131,7 +149,7 @@ a2：二次项系数，如果设置成0，得到一次函数式子
 a1：一次项系数  
 a0：常数项，主要会影响到对应的具体颜色，不影响相邻两个格子对应数字的差值  
 
-对于border_1.pde和border_2.pde，还有：
+对于border_x.pde边框系列，还有：
 
 border：边框宽度。最好小于格子尺寸，以免只能画出一种颜色。如果不想看到其他不必要的颜色像素点，就取奇数值。
 
@@ -179,3 +197,18 @@ border：边框宽度。最好小于格子尺寸，以免只能画出一种颜�
 ### numbers_10.pde的使用方式
 
 与numbers_9.pde类似。只是目前设置随机颜色只能通过改变m值实现，这样便于查看相同的颜色组合不同a2、a1、a0的视觉效果差异。
+
+### border_x.pde边框系列的使用方式
+
+与对应的numbers_x.pde类似
+不同之处主要在于调整border的值可以得到不同视觉效果
+
+### random_x.pde随机系列的使用方式
+
+与对应的numbers_x.pde类似
+不同之处主要在于:
+- 参数只有点击鼠标左键才能更新
+- p和m每次更新实际上都是随机取值
+- 不能批量保存图形
+- 不能参数一帧一帧自动更新慢慢看不同图形
+- 更多改变画布尺寸和随机参数值查看不同视觉效果
