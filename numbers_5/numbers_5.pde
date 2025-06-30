@@ -23,8 +23,8 @@ void draw() {
   // 问了AI,AI给出了String.format()
   s = String.format("初值0_除以%d的余数_四面体数的%d倍_%dx%d格.png", m, p, width/w, height/h);
   println(s);
-  for (int y = 0; y < height; y += h) {
-    for (int x = 0; x < width; x += w) {
+  for (int y = 0; y <= height - h; y += h) {
+    for (int x = 0; x <= width - w; x += w) {
       rect(x, y, w, h);
       da += p;
       da1 += da;

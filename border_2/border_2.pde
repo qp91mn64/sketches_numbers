@@ -1,5 +1,5 @@
 /**
-  2025/6/22 - 2025/6/24
+  2025/6/22 - 2025/6/30
   边框
   参考：numbers_2.pde
   p的整数次方除以m的余数
@@ -37,8 +37,8 @@ void draw() {
   s = String.format("初值0_除以%d的余数_%d的整数次方_格子尺寸%dx%d_边框宽度%d_%dx%d格.png", m, p, w, h, border, width/w, height/h);
   println(s);
   colorMode(HSB, m);
-  for (int y = 0; y < height; y += h) {
-    for (int x = 0; x < width; x += w) {
+  for (int y = 0; y <= height - h; y += h) {
+    for (int x = 0; x <= width - w; x += w) {
       rect(x, y, w, h);
       a *= p;
       if (a > m) {

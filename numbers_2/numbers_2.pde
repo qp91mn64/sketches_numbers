@@ -22,8 +22,8 @@ void draw() {
   // 问了AI,AI给出了String.format()
   s = String.format("初值1_除以%d的余数_%d的整数次方_%dx%d格.png", m, p, width/w, height/h);
   println(s);
-  for (int y = 0; y < height; y += h) {
-    for (int x = 0; x < width; x += w) {
+  for (int y = 0; y <= height - h; y += h) {
+    for (int x = 0; x <= width - w; x += w) {
       rect(x, y, w, h);
       a *= p;
       if (a > m) {

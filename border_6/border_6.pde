@@ -1,5 +1,5 @@
 /**
-  2025/6/21
+  2025/6/21 - 2025/6/30
   边框
   从numbers_6.pde改动而来
   还是整数的p次幂除以m的余数
@@ -36,8 +36,8 @@ void draw() {
   // 问了AI,AI给出了String.format()
   s = String.format("初值1_除以%d的余数_整数的%d次方_格子尺寸%dx%d_边框宽度%d_%dx%d格.png", m, p, w, h, border, width/w, height/h);
   println(s);
-  for (int y = 0; y < height; y += h) {
-    for (int x = 0; x < width; x += w) {
+  for (int y = 0; y <= height - h; y += h) {
+    for (int x = 0; x <= width - w; x += w) {
       int aa = a;
       for (int b = 1; b < p; b++) {
         aa *= a;

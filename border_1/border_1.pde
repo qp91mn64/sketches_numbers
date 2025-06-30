@@ -1,5 +1,5 @@
 /**
-  2025/6/22
+  2025/6/22 - 2025/6/30
   边框
   由numbers_1.pde和border_1.pde改动而来
   p的整数倍除以m的余数
@@ -34,8 +34,8 @@ void draw() {
   s = String.format("初值0_除以%d的余数_%d的整数倍_格子尺寸%dx%d_边框宽度%d_%dx%d格.png", m, p, w, h, border, width/w, height/h);
   println(s);
   colorMode(HSB, m);
-  for (int y = 0; y < height; y += h) {
-    for (int x = 0; x < width; x += w) {
+  for (int y = 0; y <= height - h; y += h) {
+    for (int x = 0; x <= width - w; x += w) {
       rect(x, y, w, h);
       a += p;
       if (a > m) {

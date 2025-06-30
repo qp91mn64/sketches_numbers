@@ -1,5 +1,5 @@
 /**
-  2025/6/24
+  2025/6/24 - 2025/6/30
   边框
   参考：numbers_3.pde
   三角形数的整数倍除以m的余数
@@ -37,8 +37,8 @@ void draw() {
   s = String.format("初值0_除以%d的余数_三角形数的%d倍_格子尺寸%dx%d_边框宽度%d_%dx%d格.png", m, p, w, h, border, width/w, height/h);
   println(s);
   colorMode(HSB, m);
-  for (int y = 0; y < height; y += h) {
-    for (int x = 0; x < width; x += w) {
+  for (int y = 0; y <= height - h; y += h) {
+    for (int x = 0; x <= width - w; x += w) {
       rect(x, y, w, h);
       da += p;
       a += da;

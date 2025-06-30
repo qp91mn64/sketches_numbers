@@ -1,5 +1,5 @@
 /**
-  2025/6/27
+  2025/6/27 - 2025/6/30
   随机格子大小
   参考：numbers_1.pde
   
@@ -34,8 +34,8 @@ void draw() {
   s = String.format("初值0_除以%d的余数_%d的整数倍_格子尺寸%dx%d_%dx%d格.png", m, p, w, h, width/w, height/h);
   println(s);
   colorMode(HSB, m);
-  for (int y = 0; y < height; y += h) {
-    for (int x = 0; x < width; x += w) {
+  for (int y = 0; y <= height - h; y += h) {
+    for (int x = 0; x <= width - w; x += w) {
       rect(x, y, w, h);
       a += p;
       if (a > m) {
