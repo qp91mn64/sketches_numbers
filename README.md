@@ -1,244 +1,64 @@
-# my_Processing_sketches_numbers 数字系列  
+# sketches_numbers 数字系列  
 
-用Processing 4.3.2 写的一些关于数字及其取余数的简陋代码。
+给定数字序列，取余数，再按照数值对应不同颜色，画成方格，能画出什么图形？不同数列，不同画图方式，又能画出什么图形？
 
 ## 目前已有的代码
 
-- numbers_1.pde：指定正整数的整数倍  
-- numbers_2.pde：指定正整数的指数函数  
-- numbers_3.pde：指定三角形数的整数倍  
-- numbers_4.pde：指定完全平方数的整数倍  
-- numbers_5.pde：指定四面体数的整数倍  
-- numbers_6.pde：连续正整数的幂函数  
-- numbers_7.pde：指定斐波那契数列的整数倍
-- numbers_8.pde：指定二次函数的整数倍
-- numbers_9.pde：指定或随机参数的二次函数的整数倍
-- numbers_10.pde：指定或随机参数的二次函数的整数倍，加上随机指定高饱和度彩色（或黑白）
+### 数字系列 numbers
 
-- numbers_11.pde：指定一次函数
+对整数数列乘 `p`，或者用 `p` 的指数次幂，除以 `m` 取余数，填充颜色，画方格，得到图形。没有边框。
 
-### 边框
+这个代码仓库的核心部分。
 
-- border_1.pde：在numbers_1.pde的基础上加上边框
-- border_2.pde：在numbers_2.pde的基础上加上边框
-- border_3.pde：在numbers_3.pde的基础上加上边框
-- border_6.pde：在numbers_6.pde的基础上加上边框
+### 边框 border
 
-### 随机
+加上不同粗细的边框，画出的图形有什么不同？
 
-- random_1.pde：在numbers_1.pde的基础上随机p和m
-- random_2.pde：在numbers_2.pde的基础上随机p和m
-- random_3.pde：在numbers_3.pde的基础上随机p和m
-- random_4.pde：在numbers_4.pde的基础上随机p和m
-- random_5.pde：在numbers_5.pde的基础上随机p和m
-- random_6.pde：在numbers_6.pde的基础上随机p和m
-- random_7.pde：在numbers_7.pde的基础上随机p和m
+### 随机 random
 
-- random_grid_size_1.pde：在numbers_1.pde的基础上随机格子尺寸
+随机不同类型参数，不用按顺序一个一个慢慢试。
 
-## 当前代码简介
+## 关于 Processing
 
-### numbers_1.pde
+Processing 是一种开源的编程语言，也是一个开发环境，与多种常见的编程语言的区别是，输入代码就能直接画出各种想要的图形。默认 Java 模式。详见官网 [https://processing.org](https://processing.org)。
 
-从初始值0开始，一次加上整数p，得到一个新的数，除以m取余数，把得到的数字对应一种颜色画出来  
+根据其项目地址 [https://github.com/processing/processing4](https://github.com/processing/processing4)，Processing 4 的许可证信息：
 
-### numbers_2.pde  
+- 核心库遵循 [LGPLv2.1](https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html) 许可证
+- Processing 开发环境遵循 [GPLv2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html) 许可证
 
-从初始值1开始，一次乘以整数p，得到p的整数次幂，除以m取余数，把得到的数字对应一种颜色画出来  
+如果只是用 Processing 作为工具创作的代码，一般可以自由选择许可证。
 
-### numbers_3.pde   
+## 运行环境
 
-从初始值0开始，实现三角形数的项，再乘p，除以m取余数，把得到的数字对应一种颜色画出来  
+建议使用 `Processing 4.3.2` 或更高版本。没有在其他版本上测试，不保证能在每个版本上正常运行。
 
-### numbers_4.pde  
+Processing 最新版本下载地址：[https://processing.org/download](https://processing.org/download)
 
-从初始值0开始，先平方再乘以p，得到一个新的数，除以m取余数，把得到的数字对应一种颜色画出来  
+下载特定版本：[https://github.com/processing/processing4/releases](https://github.com/processing/processing4/releases)
 
-### numbers_5.pde  
+## 运行方式
 
-从初始值0开始，实现四面体数的项，再乘p，除以m取余数，把得到的数字对应一种颜色画出来  
+用 Git 克隆仓库：
 
-### numbers_6.pde  
+```bash
+git clone git@github.com:qp91mn64/sketches_numbers.git
+```
 
-从初始值0开始，计算每一个正整数的p次幂，除以m取余数，把得到的数字对应一种颜色画出来  
+或者点击绿底白字的 `Code` 按钮，选择 **Download ZIP**，下载 zip 文件，自行解压。 
 
-### numbers_7.pde  
+代码经过整理，详见各二级目录的 `README.md` 和代码里的说明。  
 
-从初始值1开始，实现斐波那契数列的项，再乘p，除以m取余数，把得到的数字对应一种颜色画出来  
+一般而言，任选一份 `.pde` 文件，用 Processing 打开即可运行。  
 
-### numbers_8.pde  
+## 许可证
 
-从初始值1开始，实现指定二次函数`a2*n*n+a1*n+a0`的值，再乘p，除以m取余数，把得到的数字对应一种颜色画出来。 
+本代码仓库采用 MIT 许可证。详见 [LICENSE](LICENSE)。
 
-### numbers_9.pde
+## 其他
 
-从初始值1开始，实现指定二次函数`a2*n*n+a1*n+a0`的值，再乘p，除以m取余数，把得到的数字对应一种颜色画出来。也可以随机设置参数a2，a1，a0的值，再乘p，除以m取余数，把得到的数字对应一种颜色画出来。
+原来不是有一堆图片吗，怎么只剩这么点了？跑哪里去了？  
 
-### numbers_10.pde
+为了便于维护，同时减少文件总数以及总大小，大多数图片都被去除了。  
 
-与numbers_9.pde类似，但是随机高饱和颜色或黑白灰。
-
-### numbers_11.pde
-
-与numbers_1.pde相比  
-采取新的结构  
-把计算与画图分开成不同函数  
-相应地，保存和更新过程也分开成函数  
-画图部分只用一个for循环   
-批量保存图形主要部分也用一个函数saveMultipleImages(saveMax)实现  
-
-### border_x.pde边框系列
-
-边框系列，目前就是在numbers_x系列的基础上加上不同宽度的边框
-
-### random_x.pde随机系列
-
-随机系列，目前主要在numbers_x系列的基础上随机指定p和m看视觉效果
-
-### 颜色说明
-
-对不同数字除以m得到的余数有(m-1)种可能的值，最多可以对应(m-1)种不同颜色。  
-你完全可以自定义颜色，或者就用常见的颜色来画图，如果想尽可能全面地显示细节，只要不同数字的颜色尽可能不同即可。如果不同数字对应相同或者过于相近的颜色，可能也有独特的视觉效果，也可能不能显示部分细节，使效果大打折扣。
-
-#### 可以对应高饱和度彩色
-
-设置`HSB`颜色模式，把范围调整成m：  
-
-`colorMode(HSB, m);`  
-
-然后填充颜色：  
-
-`fill(a, m, m);`  
-
-其中a是计算得到的值，下同。  
-这样0到(m-1)这m个整数就能对应于色相间距相等、饱和度和亮度都是最大值的颜色，不用另外计算。  
-
-#### 也可以对应黑白灰  
-
-要想让计算得到的可能最大的数字`m-1`对应白色，范围设置成`m-1`：  
-
-`colorMode(RGB, m-1);`  
-
-然后填充颜色：  
-
-`fill(a);`
-
-由于范围随着m的变化对应颜色不仅数量增加，具体颜色值也会相应变化。 
-
-注意：当m太大时，可能会发现两个相邻的整数实际上对应的是相同颜色。
-
-#### 随机颜色
-
-目前只有numbers_10.pde能在一定程度上随机指定颜色。  
-
-在numbers_10.pde中，颜色模式是：  
-
-`colorMode(HSB, 360, 255, 255); `
-
-两种填充颜色方式：
-
-随机指定高饱和度彩色：
-
-`fill(random(360), 255, 255)`
-
-随机指定黑白灰：
-
-`fill(random(360))`
-
-### 参数说明
-
-一般默认画布尺寸100x100像素，10x10格，也可以设置不同的画布尺寸。
-
-p：处理所用参数，因处理方式而异  
-w：格子宽度，默认10个像素  
-h：格子高度，默认10个像素  
-m：除数，即对m取模运算    
-max_m：在批量保存图片时设置的m的最大值，可用于防止一次保存太多图片  
-s：保存图片用的文件名，会显示在控制台中，一般不用动
-
-对于numbers_8.pde到numbers_10.pde，除了上述参数，还有：  
-
-a2：二次项系数，如果设置成0，得到一次函数式子  
-a1：一次项系数  
-a0：常数项，主要会影响到对应的具体颜色，不影响相邻两个格子对应数字的差值  
-
-对于numbers_11.pde：
-
-chromatic：控制画彩色还是黑白  
-a1：一次项  
-a0：常数项  
-n0：初始值    
-从而消除numbers_1.pde中初值一词的歧义  
-multiple：控制是否批量保存图形  
-
-对于border_x.pde边框系列，还有：
-
-border：边框宽度。最好小于格子尺寸，以免只能画出一种颜色。如果不想看到其他不必要的颜色像素点，就取奇数值。
-
-参数更新方式：  
-
-一般地，每一次循环都会更新参数p，m，s，更新方式是先p加1，p加到m-1之后就变成1同时m加1。  
-对于numbers_9.pde，用鼠标左键随机指定参数a2，a1，a0，数字键更新参数p（相应的，m），a2，a1，a0，且没有max_m。
-对于numbers_10.pde，与numbers_9.pde类似，只是只有改变m值才会重新指定随机颜色。
-
-## 使用方式
-
-请先从Processing官网下载安装Processing 4（如果之前没有安装过）：  
-
-[https://processing.org/download](https://processing.org/download)  
-
-从这里找Processing 4 的特定版本：  
-
-[https://github.com/processing/processing4/releases](https://github.com/processing/processing4/releases)
-
-装好了吗？在本仓库主页下载代码或者克隆仓库：每个文件夹里面都有一份.pde文件和不尽相同的示例图形。打开.pde文件，用Processing 4 打开运行即可。
-
-### 直接运行
-
-如果一切正常，你能在一个较小的窗口上看到预期图形，同时会在控制台找到当前有关信息。想更新参数看下一张图形就点击鼠标左键，想保存这张图形就点击鼠标右键，文件名称已经帮你写好了，就是控制台显示的信息。还可以尝试手动调整各种参数实现不同视觉效果。  
-
-对于border_x.pde，调整border的值可以得到不同视觉效果。  
-
-对于random_grid_size_1.pde，每次运行随机指定格子尺寸，其余基本上同numbers_1.pde。
-
-### 如果你想要一次保存一堆图形
-
-这部分只适用于numbers_1.pde到numbers_8.pde。
-
-注释掉`setup()`中的`noLoop();`从而自动画出下一幅图，取消注释`draw()`中的`saveFrame(s)；`从而自动保存，然后根据你自己的喜好调整各种参数，会画一张保存一张直到m达到max_m就停止。这个过程可能要稍微等一等。如果感觉有些花哨可以最小化显示窗口直到画完。在代码所在文件夹可以查看保存的图形。  
-
-如果你想保存调整参数之后的一堆图形，并且避免不同类型的图形混在一起，就新建文件夹，把原Processing草图复制到新文件夹中，重命名Processing草图和所在文件夹使其一致，然后就可以单独保存一类图形了。  
-
-你甚至可以让参数一帧一帧自动更新慢慢看不同图形，不需要每次都点击鼠标——通过设置`frameRate(1)`或者其他比较小的数字来实现。
-
-### numbers_9.pde的使用方式
-
-由于numbers_9.pde的主要目的是，不中断代码运行就能查看不同参数值对应的不同视觉效果，交互方式与前面的代码有明显差异：  
-点击鼠标左键随机设置参数，点击鼠标右键保存图形  
-按下数字1键画下一张图形，按下2键画上一张图形  
-按下3则参数a2加1，按下4则参数a2减1  
-按下5则参数a1加1，按下6则参数a1减1  
-按下7则参数a0加1，按下8则参数a0减1  
-
-### numbers_10.pde的使用方式
-
-与numbers_9.pde类似。只是目前设置随机颜色只能通过改变m值实现，这样便于查看相同的颜色组合不同a2、a1、a0的视觉效果差异。
-
-### random_x.pde的使用方式
-
-与对应的numbers_x.pde类似
-不同之处主要在于:
-- 参数只有点击鼠标左键才能更新
-- p和m每次更新实际上都是随机取值
-- 不能批量保存图形
-- 不能参数一帧一帧自动更新慢慢看不同图形
-- 更多改变画布尺寸和随机参数值查看不同视觉效果
-
-### numbers_11.pde的使用方式
-
-可以画彩色或黑白  
-要画彩色设置chromatic = true  
-控制台查看信息  
-要批量保存图形就设置multiple = true  
-调整cols，rows实现不同视觉效果  
-注意cellWidth或cellHeight是小数时边界上有其他颜色的像素点  
+不过可以通过 Git 回退到之前的版本查看所有曾经加到代码仓库里的图片。  
